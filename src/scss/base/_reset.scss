@@ -1,0 +1,168 @@
+/*---------------------
+  Global Styles
+---------------------*/
+/* Partial CSS Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:  rgba(0, 0, 0, 0);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+audio, canvas, video{
+  display: inline-block;
+}
+audio:not([controls]){
+  display: none;
+  height: 0;
+}
+pre{
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table{
+  border: 0 none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td{
+  text-align: left;
+  font-weight: normal;
+}
+td{
+  vertical-align: top;
+}
+/* Form Reset */
+input,
+label,
+select,
+button,
+textarea
+{
+  margin:0;
+  border:0;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  line-height:1;
+  font-family:Arial;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select
+{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week]
+{
+
+}
+
+input[type=file]
+{
+
+}
+input[type="search"]{
+    -webkit-appearance: textfield;
+    -webkit-box-sizing:content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]{
+  cursor: pointer;
+}
+input[type="submit"]::-moz-focus-inner{ /* Fix extra button padding in Firefox */
+  padding: 0;
+  border: none;
+  line-height: 1;
+}
+input[type]:-webkit-autofill,
+input[type]:-webkit-autofill:hover,
+input[type]:-webkit-autofill:focus,
+input[type]:-webkit-autofill:active{ /* Fix input background with autocomplete */
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+    text-fill-color: #fff !important;
+}
+input:focus{
+  outline:0;
+}
+textarea{
+  resize: none;
+}
+::-webkit-input-placeholder{
+    color: #ccc;
+}

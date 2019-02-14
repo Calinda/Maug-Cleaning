@@ -1,0 +1,38 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face{
+		font-family: $font-family;
+		src: url('#{$file-path}.eot');
+		src: local('☺'), url('#{$file-path}.woff') format('woff'),
+						 url('#{$file-path}.ttf') format('truetype'),
+						 url('#{$file-path}.svg') format('svg');
+		font-weight: $weight;
+		font-style:  $style;
+	}
+}
+@mixin heading($i, $font, $font-weight: normal, $text-transform: uppercase){
+    h#{$i}{
+		font: $font;
+		font-weight: $font-weight;
+		text-transform: $text-transform;
+		@content;
+    }
+}
+
+@mixin icon($width, $height, $name, $radius: false){
+	@extend %icon;
+	width: $width;
+	height: $height;
+	background: url(#{$img-icons}#{$name});
+	@if $radius == 'radius'{
+		border-radius: 50%;
+	}
+	@content;
+}
+
+@mixin transition($transition){
+	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+	 	-ms-transition: $transition;
+		 -o-transition: $transition;
+			transition: $transition;
+}

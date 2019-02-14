@@ -1,0 +1,248 @@
+#header{
+    height: 140px;
+}
+.header-wrapper{
+	position: fixed;
+	top: 0;
+	width: 100%;
+    box-shadow: 0 3px 8px 0 rgba(1,1,1,.1);
+	z-index: 120;
+}
+.top-bar{
+	font: 14px 'OpenSans-Semibold';
+	color: #fff;
+	background: url(../images/layout/header.jpg) center top #002739;
+	height: 40px;
+	.container{
+		max-width: 1230px;
+		padding: 0;
+		height: 100%;
+		@include align-items(center);
+		@include justify-content(flex-end);
+	}
+}
+.top-menu{
+	li{
+		margin-right: 30px;
+		a{
+			color: #fff;
+			&:hover{
+				color: #0399de;
+			}
+		}
+		
+	}
+}
+.btn-top {
+	@extend %button; 
+    font: 14px 'OpenSans-Bold';
+    background: #005176;
+    height: 100%;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 232px;
+}
+/* Main Navigation*/
+.header-menu{
+	position: relative;
+	background-color: #fff;
+	height: 100px;
+	.flex-wrap{
+		@include align-items(center);
+		@include justify-content(space-between);
+	}
+	.flex-cell:first-child{
+		width: 176px;
+		@include align-content(center);
+	}
+	.flex-cell:last-child{
+		width: 174px;
+	}
+	.btn{
+		min-width: auto;
+	}
+}
+.main-nav{
+	height: 100%;
+	nav, .nav-menu, li, a{
+		height: 100%;
+	}
+}
+#nav-btn,
+#nav-close-btn{
+	font-size: 35px;
+}
+.nav-menu{
+	li{
+		padding: 0 18px;
+		&.has-child{
+			position: relative;
+		}
+		&.active > a,
+		&:hover > a{
+			font-family: 'OpenSans-ExtraBold';
+			color: #0399de;
+		}
+	}
+	a{
+		@include flexbox;
+		@include align-items(center);
+		position: relative;
+		white-space: nowrap;
+		font: 16px 'OpenSans-Bold';
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	    color: #002130;
+	    &:after{
+	    	content: "";
+		    display: block;
+		    width: 100%;
+		    height: 12px;
+		    background-color: #005176;
+		    position: absolute;
+		    bottom: 0;
+		    @extend .hidden;
+	    };
+	}
+}
+
+.sub-menu{
+    width: 292px;
+    padding: 35px 34px 35px 34px;
+    text-align: center;
+    background-color: #005176;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+    		transform: translate(-50%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    & li{
+    	margin-bottom: 20px;
+    	&.last-child{
+    		margin-bottom: 0;	
+    	}
+    }
+    & a{
+    	 color: #fff;
+    	 &:hover{
+			color: #0399de;
+    	 }
+    }
+}
+.nav-menu > li.active > a:after,
+.nav-menu > li > a:hover:after,
+li.has-child:hover > a:after,
+li.has-child:hover .sub-menu{
+	@extend .visible;
+}
+
+/* Search */
+.search-btn {
+    position: relative;
+    margin-right: 30px; 
+}
+.search-btn.close {
+	&:after{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 7px 7px 7px;
+		border-color: transparent transparent #00293d transparent;
+		position: absolute;
+		top: -15px;
+		z-index: 1;
+		
+    }
+	& .ico-search{
+		background: none;
+	}
+	& .ico-search:before{
+		content: "X";
+		font: 17px/17px 'OpenSans-Bold';
+		font-style: normal;
+		position: absolute;
+		left: 1px;
+		top: -2px;
+		@extend .visible;
+		background: none;
+	}
+	&:hover .ico-search:before{
+		color: #0399de;
+	}
+}
+.search-box{
+	background: #fff;
+	height: 0;
+	overflow: hidden;
+	@include transition($transition);
+}
+.search-box.show{
+	height: 102px;
+    padding: 22px 0 20px 0; 
+    @extend .visible;
+}
+.search-box .search-form{
+	padding: 0 48px 0 40px;
+}
+.search-box ::-webkit-input-placeholder{
+  	color: #002130;
+}
+.search-box :-moz-placeholder{
+	color: #002130;
+}
+.search-box :-ms-input-placeholder{
+	color: #002130;
+}
+.search-box input[type=text]{
+	font: 16px 'OpenSans-Bold';
+	text-transform: uppercase;
+    @include flex-grow(1);
+    padding: 13px 20px 12px 27px;
+    border-left: 1px solid #002739;
+    color: #002130;
+}
+.search-box input[type=submit]{
+	width: 60px;
+	height: 60px;
+	background: url(../images/icons/search-dark.png) no-repeat center center;
+	border: 6px solid #0399de;
+	border-radius: 50%;
+	@include transition($transition);
+	&:hover{
+		background: url(../images/icons/search.png) no-repeat center center #0399de;
+	}
+}
+/* Fixed Header */
+#inner, .fixed{
+	#header{
+		height: 120px;
+	}
+	.top-bar{
+		height: 36px;
+	}
+	.btn-top, .top-menu{
+		padding-top: 7px;
+	}
+	.search-btn.close:before{
+		top: -12px;
+	}
+	.header-menu{
+		height: 84px;
+	}
+	.header-menu .cell:first-child{
+		width: 150px;
+	}
+	 .nav-menu{
+		padding-top: 34px;
+	}
+	.search-box.show	{
+	    height: 80px;
+		padding: 10px 0 20px 0;
+	}
+}
