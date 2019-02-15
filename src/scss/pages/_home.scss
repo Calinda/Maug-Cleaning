@@ -1,4 +1,28 @@
 /*=== ABOUT SECTION ===*/
-.about-wrapper .flex-cell:last-child{
+.about-wrapper{
+    position: relative;
+    margin-bottom: -85px;
+    background: url(../images/layout/wood.jpg);
 
+	.container{
+		max-width: 1200px;
+	}
+	.flex-cell:first-child{
+	    padding: 85px 85px 170px 95px;
+	}
+	.flex-cell:last-child{
+		width: 416px;
+		@include flex-shrink(0);
+		@include flex-grow(0);
+	}
+	.img-box:before{
+		content: "";
+	    background: url(../images/banners/stamp.png) no-repeat;
+	    width: 281px;
+	    height: 284px;
+	    position: absolute;
+	    top: 60px;
+	    left: -35px;
+	    z-index: 1;
+	}
 }

@@ -84,7 +84,6 @@ a{
 }
 .flex-wrap{
   @include flexbox;
-  @include flex-wrap(wrap);
 } 
 .flex-cell{
 	}
@@ -182,6 +181,28 @@ a{
 			background-color: $clr-btn;
 			border-color: $clr-btn;
 		}
+	}
+}
+/* Image Box */
+.img-box{
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	&:after{
+		content: "";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    -webkit-border-radius: inherit;
+	    -moz-border-radius: inherit;
+	    border-radius: inherit;
+	    background: rgba(0, 39, 57, 0.3);
+	}
+	.relative{
+		z-index: 1;
 	}
 }
 /* Icons */
