@@ -334,9 +334,6 @@ a:before, a:after {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 /* Misc */
@@ -461,6 +458,31 @@ li.has-child:hover .sub-menu, .search-btn.close .ico-search:before, .search-box.
   color: #fff;
   background-color: #0399de;
   border-color: #0399de;
+}
+
+/* Image Box */
+.img-box {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.img-box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  background: rgba(0, 39, 57, 0.3);
+}
+
+.img-box .relative {
+  z-index: 1;
 }
 
 /* Icons */
@@ -1022,4 +1044,44 @@ i[class^=ico]:before {
 .sub-banner .large-text span {
   display: block;
   font: 66px/66px 'Rockwell-ExtraBold';
+}
+
+/*=== ABOUT SECTION ===*/
+.about-wrapper {
+  position: relative;
+  margin-bottom: -85px;
+  background: url(../images/layout/wood.jpg);
+}
+
+.about-wrapper .container {
+  max-width: 1200px;
+}
+
+.about-wrapper .flex-cell:first-child {
+  padding: 85px 85px 170px 95px;
+}
+
+.about-wrapper .flex-cell:last-child {
+  width: 416px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-flex-grow: 0;
+  -moz-flex-grow: 0;
+  -ms-flex-grow: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.about-wrapper .img-box:before {
+  content: "";
+  background: url(../images/banners/stamp.png) no-repeat;
+  width: 281px;
+  height: 284px;
+  position: absolute;
+  top: 60px;
+  left: -35px;
+  z-index: 1;
 }
