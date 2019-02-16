@@ -13,6 +13,7 @@
 	color: #fff;
 	background: url(../images/layout/header.jpg) center top #002739;
 	height: 40px;
+	@include transition($transition2);
 	.container{
 		max-width: 1230px;
 		padding: 0;
@@ -47,6 +48,7 @@
 	position: relative;
 	background-color: #fff;
 	height: 100px;
+	@include transition($transition);
 	.flex-wrap{
 		@include align-items(center);
 		@include justify-content(space-between);
@@ -54,6 +56,7 @@
 	.flex-cell:first-child{
 		width: 176px;
 		@include align-content(center);
+		@include transition($transition2);
 	}
 	.flex-cell:last-child{
 		width: 174px;
@@ -223,10 +226,13 @@ li.has-child:hover .sub-menu{
 	#header{
 		height: 120px;
 	}
+	.header-menu .flex-cell:first-child{
+    	width: 150px;
+	}
 	.top-bar{
 		height: 36px;
 	}
-	.btn-top, .top-menu{
+	.btn-top{
 		padding-top: 7px;
 	}
 	.search-btn.close:before{
@@ -237,9 +243,6 @@ li.has-child:hover .sub-menu{
 	}
 	.header-menu .cell:first-child{
 		width: 150px;
-	}
-	 .nav-menu{
-		padding-top: 34px;
 	}
 	.search-box.show	{
 	    height: 80px;

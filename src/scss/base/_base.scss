@@ -76,6 +76,9 @@ a{
 		@include transition($transition);
 	}
 }
+img{
+	max-width: 100%;
+}
 /* Containers */
 .container{
 	max-width: 1130px;
@@ -293,6 +296,9 @@ i[class^=ico]{
 		background: rgba(255, 255, 255, 0.5);
 		&.slick-active{
 			background-color: #fff;
+		}
+		button{
+			display: none;
 		}
 	}
 }
