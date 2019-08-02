@@ -2,20 +2,179 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Test</title>
-        <meta name="description" content="">
+        <title>Maug Cleaning</title>
+        <meta name="apple-mobile-web-app-title" content="Maug Cleaning">
+        <meta name="application-name" content="Maug Cleaning">
+        <meta name="Author" content="Maug Cleaning">
+        <meta name="revisit-after" content="31 days">
+        <meta name="rating" content="general">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="">
 
         <link rel="icon" href="img/favicon/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/libs.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
         
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="js/slick.min.js"></script>
-        <script type="text/javascript" src="js/custom.min.js"></script>
+
+        <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.browser.js"></script>
+        <script type="text/javascript" src="js/libs/slick.min.js"></script>
+        <script type="text/javascript" src="js/site.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
     </head>
-    <body>
-        <h1>Test</h1>
-        <h2>Responsive</h2>
+    <body id="home">
+        <div class="main-wrapper">
+            <header id="header">
+                <div class="header-wrapper">
+                    <div id="search-box" class="search-box">
+                        <div class="container">
+                            <div class="search-form">
+                                <form action="/search/" method="get">
+                                    <div class="flex-wrap">
+                                        <input type="text" name="searchTerm" placeholder="Search our site..." value="">
+                                        <input type="submit" title="Search" value="">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-bar">
+                        <div class="container flex-wrap">
+                            <ul class="top-menu flex-wrap">
+                                
+                                <li>
+                                    <a href="#" title="Who We Are">
+                                        Who We Are
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Testimonials">
+                                        Testimonials   
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Job Opportunities">
+                                        Job Opportunities
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:715.514.4804" title="715.514.4804">
+                                        <i class="ico-phone"></i>715.514.4804
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" title="Search" id="search" class="search-btn">
+                                <i class="ico-search"></i>
+                            </a>
+                            <a href="#" title="Employee Portal" class="btn-top">
+                                Employee Portal
+                            </a>
+                            <a href="#" title="Menu" id="nav-btn" class="far fa-bars hide"></a>
+                        </div>
+                    </div>
+                    <div class="header-menu">
+                        <div class="container flex-wrap full-size">
+                            <div class="flex-cell">
+                                <a href="/" title="Maug Cleaning" class="logo">
+                                    <img src="images/layout/logo.png" alt="Alliance Bank" />
+                                </a>
+                            </div>
+                            <div class="flex-cell h-100">
+                                <div class="main-nav">
+                                    <nav>
+                                        <a href="#" title="Close Menu" id="nav-close-btn" class="far fa-times-circle hide"></a>
+                                        <ul class="nav-menu flex-wrap">
+                                            <li>
+                                                <a href="#" title="Residential">Residential</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Commercial">Commercial</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Specialty Services">Specialty Services</a>
+                                                <ul class="sub-menu">
+                                                    <li>
+                                                        <a href="#" title="Checking Accounts">Carpet Cleaning</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" title="Savings Options">Tile Cleaning</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" title="Window Cleaning">Window Cleaning</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Gallery">Gallery</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Contact">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="flex-cell">
+                                <a href="#" title="Pay My Bill" class="btn"><i class="ico-dollar"></i>Pay My Bill</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div id="main">
+                    <div id="main-banner" class="banner">
+                        <div id="hero-banner" class="top-slider">
+                            <div class="single-banner" style="background-image: url('images/banners/home/banner.jpg')">
+                                <div class="flex-wrap">
+                                    <div class="container relative">
+                                        <div class="banner-text">
+                                            <div class="large-text">Making your office look & feel <span>professional</span></div>
+                                            <div class="banner-content">
+                                                <p>see how we can help you run a cleaner, healthier business.</p>
+                                            </div>
+                                            <a href="#" title="Commercial Services" class="btn filled">Commercial Services</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-banner" style="background-image: url('images/banners/home/banner2.jpg')">
+                                <div class="flex-wrap">
+                                    <div class="container relative">
+                                        <div class="banner-text">
+                                            <div class="large-text">Your family deserves a <span>clean home</span></div>
+                                            <div class="banner-content">
+                                                <p>Whether it's one room, or your whole home, we'll clean it for you. </p>
+                                            </div>
+                                            <a href="#" title="Residential Services" class="btn filled">Residential Services</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-control"></div>
+                        <a href="#" class="move-down no-click" title="Move Down" onclick="getPosition('about')"></a>
+                    </div>
+                    <div id="about" class="about-wrapper">
+                        <div class="container">
+                            <div class="flex-wrap">
+                                <div class="flex-cell">
+                                    <h1>
+                                        <span>commercial, residential & specialty cleaning</span>
+                                        MAUG CLEANING
+                                    </h1>
+                                    <p>We know you're busy, and at Maug Cleaning Service, we want you to know it's OK to ask for a little help. Whether it's one room, or your whole home, we'll clean it for you. We also do carpet cleaning, window cleaning, and tile floor cleaning for Eau Claire, Chippewa Falls, Menomonie and surrounding areas.</p>
+                                    <p>We're glad you stopped by to look into our house cleaning services. Maug Cleaning Service will take care of your home or office with the experience, integrity, and dependability you want and the flexibility you need. Just give us a call or email us anytime. We'd be happy to help you get started with your <a href="#" title="Residential">residential</a> or <a href="#" title="Commercial">commercial</a> cleaning - large or small.</p>
+                                    <a href="#" class="btn" title="Who We Are">Who We Are</a>
+                                </div>
+                                <div class="flex-cell">
+                                    <div class="img-box full-size" style="background-image: url(images/banners/about-banner.jpg)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
